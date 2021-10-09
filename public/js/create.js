@@ -17,10 +17,16 @@ document.getElementById('btn-submit').addEventListener('click' , async (event) =
             body: JSON.stringify(data),
         })
         .then( res => {
-            console.log(`Request sent`);
-            name.value = '';
-            nim.value = '';
-            prodi.value = '';
-        })
-        .catch( (err) => console.log(`ERROR : ${err}`));
+            if (res.ok)
+            {
+                console.log(`Request sent`);
+                name.value = '';
+                nim.value = '';
+                prodi.value = '';
+            }
+            else
+            {
+                console.log('ERROR failed to create');
+            }
+        });
     });

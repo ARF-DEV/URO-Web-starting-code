@@ -11,7 +11,15 @@ window.addEventListener('click', async (event) => {
         fetch(`/api/delete/${id}`, {
             method: "DELETE",
         })
-        .then(() => {console.log('Data deleted!'); window.location.reload()})
-        .catch( err => {console.log(`Error ${err}`)})
+        .then((res) => {
+            if (res.ok) {
+                console.log('Data deleted!'); 
+                window.location.reload();
+            }
+            else
+            {
+                console.log('ERROR failed to delete')
+            }
+        });
     }
 })
