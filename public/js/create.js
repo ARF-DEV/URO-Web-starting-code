@@ -1,6 +1,6 @@
 
 //Menambahkan EventListener untuk Onclick Event
-document.getElementById('btn-submit').addEventListener('click' , async (event) => {
+document.getElementById('btn-submit').addEventListener('click' , (event) => {
 
     const name = document.getElementById('name');
     const nim = document.getElementById('nim');
@@ -19,7 +19,7 @@ document.getElementById('btn-submit').addEventListener('click' , async (event) =
         .then( res => {
             if (res.ok)
             {
-                console.log(`Request sent`);
+                console.log(`User Added`);
                 name.value = '';
                 nim.value = '';
                 prodi.value = '';

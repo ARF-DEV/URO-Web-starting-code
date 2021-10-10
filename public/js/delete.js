@@ -1,6 +1,6 @@
 
 //Menambahkan EventListener untuk Onclick Event
-window.addEventListener('click', async (event) => {
+window.addEventListener('click', (event) => {
     // logic dijalankan jika HTML element yang di click memiliki class btn-delete
     if(event.target.classList.contains('btn-delete'))
     {
